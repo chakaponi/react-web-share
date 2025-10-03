@@ -9,7 +9,7 @@ import { SocialIcons } from "./components/social-icons";
 import { useDisclosure } from "./hooks/use-disclosure";
 import type { RWebShareProps } from "./interfaces";
 
-const defaultSites = Object.keys(IconList).slice(0, 8);
+const defaultSites = Object.fromEntries(Object.entries(IconList).slice(0, 8));
 
 export const RWebShare = memo((props: RWebShareProps) => {
   const { onOpen, onClose, isOpen } = useDisclosure();
