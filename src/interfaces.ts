@@ -4,11 +4,17 @@ export interface ShareData {
   url?: string;
 }
 
+export type PartialIconItem = Partial<IconItem> | boolean;
+
+export interface Sites {
+  [key: string]: PartialIconItem;
+}
+
 export interface RWebShareProps {
   children: any;
   closeText?: string;
   data: ShareData;
-  sites?: string[];
+  sites?: Sites;
   onClick?;
   disableNative?;
 }
@@ -16,7 +22,7 @@ export interface RWebShareProps {
 export interface SocialIconsProps {
   onClose;
   closeText?: string;
-  sites: string[];
+  sites: Sites;
   data: Required<ShareData>;
   onClick?;
 }
@@ -26,6 +32,7 @@ export interface IconProps {
   name: string;
   data: Required<ShareData>;
   onClick?;
+  customIconProps?: PartialIconItem;
 }
 
 export interface IconItem {

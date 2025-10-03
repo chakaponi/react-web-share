@@ -3,8 +3,8 @@ import React from "react";
 import { IconProps } from "../../interfaces";
 import { IconList } from "./list";
 
-export default function Icon({ name, data, onClose, onClick }: IconProps) {
-  const { path, viewBox = "0 0 24 24", color, e } = IconList[name];
+export default function Icon({ name, data, onClose, onClick, customIconProps }: IconProps) {
+  const { path, viewBox = "0 0 24 24", color, e } = Object.assign({}, IconList[name], customIconProps) || IconList[name];
 
   const handleOnButtonClicked = () => {
     onClick && onClick(name); // callback
