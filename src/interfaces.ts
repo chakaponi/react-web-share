@@ -1,3 +1,5 @@
+import { JSX } from 'react'; 
+
 export interface ShareData {
   text?: string;
   title?: string;
