@@ -17,6 +17,7 @@ interface RWebShareProps {
     sites?: Sites;
     onClick?: any;
     disableNative?: any;
+    customUrlOpener?: any;
 }
 interface IconItem {
     path: JSX.Element;
