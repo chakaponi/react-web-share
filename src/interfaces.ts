@@ -19,6 +19,7 @@ export interface RWebShareProps {
   sites?: Sites;
   onClick?;
   disableNative?;
+  customUrlOpener?;
 }
 
 export interface SocialIconsProps {
@@ -27,6 +28,7 @@ export interface SocialIconsProps {
   sites: Sites;
   data: Required<ShareData>;
   onClick?;
+  customUrlOpener?;
 }
 
 export interface IconProps {
@@ -35,6 +37,7 @@ export interface IconProps {
   data: Required<ShareData>;
   onClick?;
   customIconProps?: PartialIconItem;
+  customUrlOpener?;
 }
 
 export interface IconItem {

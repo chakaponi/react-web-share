@@ -11,6 +11,7 @@ export const SocialIcons = ({
   data,
   closeText,
   onClick,
+  customUrlOpener
 }: SocialIconsProps) => (
   <section
     role="dialog"
@@ -27,6 +28,7 @@ export const SocialIcons = ({
           onClose={onClose}
           onClick={onClick}
           customIconProps={iconProps}
+          customUrlOpener={customUrlOpener}
         />
       ))}
     </div>

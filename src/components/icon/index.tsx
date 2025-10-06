@@ -3,12 +3,16 @@ import React from "react";
 import { IconProps } from "../../interfaces";
 import { IconList } from "./list";
 
-export default function Icon({ name, data, onClose, onClick, customIconProps }: IconProps) {
-  const { path, viewBox = "0 0 24 24", color, e } = Object.assign({}, IconList[name], customIconProps) || IconList[name];
+export default function Icon({ name, data, onClose, onClick, customIconProps, customUrlOpener }: IconProps) {
+  const { path, viewBox = "0 0 24 24", color, e } = Object.assign({}, IconList[name], customIconProps);
+
+  const standartOpener = (URL) => window.open(URL, "_blank", "noopener");
+
+  const urlOpener = customUrlOpener || standartOpener;
 
   const handleOnButtonClicked = () => {
     onClick && onClick(name); // callback
-    e(encodeURIComponent(data.url), data.text, data.title);
+    e(urlOpener, encodeURIComponent(data.url), data.text, data.title);
     onClose();
   };
 
