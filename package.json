@@ -1,7 +1,7 @@
 {
   "name": "react-web-share",
   "author": "harshzalavadiya",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Tiny Web Share API Wrapper with fallback for unsupported browsers",
   "license": "MIT",
   "repository": "https://github.com/hc-oss/react-web-share",

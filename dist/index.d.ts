@@ -28,4 +28,9 @@ interface IconItem {
 
 declare const RWebShare: React.MemoExoticComponent<(props: RWebShareProps) => react_jsx_runtime.JSX.Element>;
 
-export { RWebShare, type RWebShareProps };
+interface IconListObject {
+    [key: string]: IconItem;
+}
+declare const IconList: IconListObject;
+
+export { IconList, RWebShare, type RWebShareProps };
